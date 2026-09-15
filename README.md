@@ -1,4 +1,4 @@
-# T19 — Phát hiện khoảng mạng suy giảm bằng Isolation Forest
+# T19 - Phát hiện khoảng mạng suy giảm bằng Isolation Forest
 
 Trong tiểu luận này, nhóm 9 em xây dựng chương trình theo dõi chất lượng mạng và phát hiện các khoảng thời gian có dấu hiệu suy giảm. Bài làm gồm báo cáo sáu chương và hai file Python: `collector.py` để thu thập dữ liệu, `phan_tich.py` để phân tích. Báo cáo chính là **Bao_cao_T19.docx**.
 Nhóm em đã lựa chọn mô hình chính là Isolation Forest trong việc phát hiện abnormally. Baseline theo ngưỡng do nhóm em xây dựng chỉ để đối chiếu. Phần tương quan TCP, TLS, TTFB và phân tích HTTP do nhóm em chạy sau mô hình, do đó không thêm đầu vào cho Isolation Forest.
