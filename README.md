@@ -118,6 +118,3 @@ Phân tích CSV mới có cùng schema và target Google:
 ```powershell
 .\.venv\Scripts\python.exe phan_tich.py --input du_lieu/thu_moi.csv --output ket_qua_thu_moi
 ```
-## Mã nguồn GitHub
-
-Repository của đề tài: [[https://github.com/ten-tai-khoan/ten-repository](https://github.com/biay3x/Mang_may_tinh)]
