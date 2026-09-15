@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-collector_goc.py - Thu thap dinh ky du lieu chat luong mang cho de tai T19.
+collector.py - Thu thap dinh ky du lieu chat luong mang cho de tai T19.
 
 Do dinh ky cac metric:
     rtt_ms, rtt_min_ms, rtt_max_ms, jitter_ms, n_sent, n_received, loss_rate,
@@ -10,7 +10,7 @@ Do dinh ky cac metric:
 va ghi vao file CSV (moi dong = 1 lan do).
 
 Cach chay:
-    python collector_goc.py            # chay lien tuc, do moi INTERVAL_SECONDS
+    python collector.py            # chay lien tuc, do moi INTERVAL_SECONDS
 
 Dung Ctrl+C de dung chuong trinh. Chuong trinh khong co che do chi
 do 1 lan roi thoat; day la vong lap lien tuc duy nhat.
