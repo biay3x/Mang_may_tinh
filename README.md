@@ -7,7 +7,7 @@ Nhóm em đã lựa chọn mô hình chính là Isolation Forest trong việc ph
 
 | File hoặc thư mục | Vai trò |
 |---|---|
-| Bao_cao_T19.docx | Báo cáo chính; nhóm em đã điền thông tin cá nhân trên bìa |
+| Bao_cao_T19.pdf | Báo cáo chính; nhóm em đã điền thông tin cá nhân trên bìa |
 | collector.py | Thu theo chu kỳ 30 giây, chạy liên tục, dừng bằng Ctrl+C |
 | phan_tich.py | Đọc CSV ngoại tuyến, phân tích và tạo kết quả |
 | du_lieu/network_quality_data.csv | Dataset 51.070 dòng, 15 cột dùng trong báo cáo |
