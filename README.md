@@ -63,8 +63,7 @@ Chín feature mà nhóm em đưa vào mô hình gồm trung bình cửa sổ c�
 
 Khoảng được nhóm em giữ phải có ít nhất ba mẫu cảnh báo liên tiếp, cách nhau đúng 30 giây. Ba mẫu trải từ đầu tới cuối 60 giây; chương trình của nhóm em cộng 30 giây sau mẫu cuối để ước lượng độ phủ 90 giây. Nhóm nhấn mạnh đây không phải thởi lượng sự cố đã xác nhận. Có 31 trong 402 mẫu cảnh báo nằm ở các đoạn ngắn bị nhóm em loại khi gộp khoảng.
 
-## 5. Đọc kết quả và phần HTTP nâng cao của nhóm em## 5. Đọc kết quả và phần HTTP nâng cao
-
+## 5. Đọc kết quả và phần HTTP nâng cao của nhóm em
 | File trong ket_qua | Nội dung |
 |---|---|
 | hinh_1_timeline.png | Timeline chỉ số mạng và các mẫu IF cảnh báo do nhóm em vẽ |
@@ -103,7 +102,7 @@ Nhóm không dùng baseline làm nhãn đúng và chưa tính F1 vì chưa có n
 
 Phần này có truy cập mạng; nhóm em chỉ thu trên máy và mạng được phép. Để tái lập kết quả báo cáo, chỉ cần chạy phần phân tích, không cần thu lại.
 
-Ngưởi dùng mở `collector.py` và sửa hằng số `OUTPUT_CSV` sang một **file mới**. Bản nhóm em cung cấp đang giữ nguyên đường dẫn máy ban đầu: `E:\Python\Mangmaytinh (1)\network_quality_data.csv`. Có thể sửa thành `du_lieu/thu_moi.csv` khi chạy từ thư mục bài.
+Collector mặc định ghi thêm vào `du_lieu/network_quality_data.csv` trong thư mục chứa `collector.py`. Để giữ nguyên dataset dùng trong báo cáo, người dùng mở `collector.py` và đổi tên file `network_quality_data.csv` thành `thu_moi.csv` trong dòng khai báo `OUTPUT_CSV`. Giữ nguyên phần đường dẫn còn lại và thư mục `du_lieu`. Sau đó chạy:
 
 ```powershell
 .\.venv\Scripts\python.exe collector.py
@@ -111,9 +110,9 @@ Ngưởi dùng mở `collector.py` và sửa hằng số `OUTPUT_CSV` sang một
 
 Collector do nhóm em viết chỉ chạy liên tục theo `INTERVAL_SECONDS=30`; nhấn Ctrl+C để dừng. Chương trình không nhận tùy chọn dòng lệnh. Nhật ký mới là `collector.log` trong thư mục làm việc, khác với log lịch sử nằm ở `du_lieu/network_quality_data.log`. Khi dùng Task Scheduler, nhóm em đặt thư mục làm việc phù hợp và tránh khởi chạy chồng các tiến trình.
 
-Với một target, mỗi lượt do collector của nhóm em thực hiện gồm bốn ping, một phép DNS và một yêu cầu HTTPS, dự kiến khoảng hai lượt mỗi phút. Nếu một lượt kéo dài hơn 30 giây, lượt kế tiếp bắt đầu sau đó, không chạy bù. Nhóm em không tăng tần suất hay tạo tải để gây suy giảm. Ngưởi dùng nên giữ nguyên ba hàm đo nếu muốn so sánh với dataset hiện tại của nhóm em.
+Với một target, mỗi lượt do collector của nhóm em thực hiện gồm bốn ping, một phép DNS và một yêu cầu HTTPS, dự kiến khoảng hai lượt mỗi phút. Nếu một lượt kéo dài hơn 30 giây, lượt kế tiếp bắt đầu sau đó, không chạy bù. Nhóm em không tăng tần suất hay tạo tải để gây suy giảm. Người dùng nên giữ nguyên ba hàm đo nếu muốn so sánh với dataset hiện tại của nhóm em.
 
-Phân tích CSV mới có cùng schema và target Google:
+Phân tích CSV mới có cùng cấu trúc cột và target Google:
 
 ```powershell
 .\.venv\Scripts\python.exe phan_tich.py --input du_lieu/thu_moi.csv --output ket_qua_thu_moi
