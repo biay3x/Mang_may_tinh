@@ -51,8 +51,10 @@ def read_and_clean(path):
     df = df.dropna(subset=["timestamp"])
     audit["exact_duplicates"] = int(df.duplicated().sum())
     df = df.drop_duplicates().sort_values("timestamp").reset_index(drop=True)
-    if df.duplicated(["timestamp", "target_id"]).any():
-        raise ValueError("Có hai dòng khác số đo nhưng cùng thời điểm/target; cần kiểm tra nguồn.")
+    if df.duplicated(["timestamp"]).any():
+        raise ValueError(
+            "Có hai dòng khác dữ liệu nhưng cùng thời điểm; cần kiểm tra nguồn."
+        )
     for col in METRICS:
         # Chuyển dữ liệu sang số; giá trị không hợp lệ hoặc vô cực được xem là thiếu.
         df[col] = pd.to_numeric(df[col], errors="coerce").replace([np.inf, -np.inf], np.nan)
