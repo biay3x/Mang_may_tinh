@@ -1,0 +1,108 @@
+{
+  "audit": {
+    "input_rows": 51070,
+    "input_columns": 15,
+    "missing_before": {
+      "timestamp": 0,
+      "target_id": 0,
+      "rtt_ms": 2,
+      "rtt_min_ms": 2,
+      "rtt_max_ms": 2,
+      "jitter_ms": 2,
+      "n_sent": 0,
+      "n_received": 0,
+      "loss_rate": 0,
+      "dns_latency_ms": 4,
+      "tcp_connect_ms": 3,
+      "tls_handshake_ms": 3,
+      "ttfb_ms": 3,
+      "http_latency_ms": 3,
+      "http_status_code": 1
+    },
+    "invalid_timestamps": 0,
+    "exact_duplicates": 0,
+    "jitter_corrected": 0,
+    "loss_count_mismatches": 1,
+    "http_status_without_times": 2,
+    "clean_rows": 51070,
+    "sessions": 20,
+    "gaps_over_60s": 19,
+    "median_gap_seconds": 30.0,
+    "missing_after": {
+      "rtt_ms": 2,
+      "jitter_ms": 2,
+      "loss_rate": 0,
+      "dns_latency_ms": 4,
+      "http_latency_ms": 3
+    },
+    "start": "2026-08-19 17:34:00+07:00",
+    "end": "2026-09-08 01:00:00+07:00"
+  },
+  "warmup_removed": 40,
+  "feature_columns": [
+    "rtt_ms_mean",
+    "jitter_ms_mean",
+    "loss_rate_mean",
+    "dns_latency_ms_mean",
+    "http_latency_ms_mean",
+    "rtt_std",
+    "rtt_p95",
+    "http_p95",
+    "hour"
+  ],
+  "window_minutes": 5,
+  "train_rows": 35721,
+  "test_rows": 15309,
+  "train_end": "2026-09-02 07:23:00+07:00",
+  "test_start": "2026-09-02 07:23:30+07:00",
+  "contamination": 0.05,
+  "score_threshold": 0.6016949948667434,
+  "baseline_thresholds": {
+    "rtt_ms": 100,
+    "jitter_ms": 20,
+    "loss_rate": 0.05,
+    "dns_latency_ms": 100,
+    "http_latency_ms": 1000
+  },
+  "n_estimators": 100,
+  "max_samples": 256,
+  "random_state": 42,
+  "evaluation_has_ground_truth": false,
+  "missing_feature_cells_before_imputation": 0,
+  "versions": {
+    "pandas": "3.0.1",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.0",
+    "matplotlib": "3.11.1"
+  },
+  "counts": {
+    "test": {
+      "n": 15309,
+      "baseline": 1624,
+      "isolation_forest": 402,
+      "both": 402,
+      "jaccard": 0.24753694581280788
+    },
+    "train": {
+      "n": 35721,
+      "baseline": 4110,
+      "isolation_forest": 1786,
+      "both": 1786,
+      "jaccard": 0.4345498783454988
+    }
+  },
+  "reference_median": {
+    "rtt_ms_mean": 50.0,
+    "jitter_ms_mean": 1.0413999999999999,
+    "loss_rate_mean": 0.0,
+    "dns_latency_ms_mean": 45.3911,
+    "http_latency_ms_mean": 495.40420000000006
+  },
+  "reference_iqr": {
+    "rtt_ms_mean": 7.282299999999999,
+    "jitter_ms_mean": 0.49109999999999987,
+    "loss_rate_mean": 0.03198494714769197,
+    "dns_latency_ms_mean": 6.9217999999999975,
+    "http_latency_ms_mean": 22.796100000000024
+  }
+}

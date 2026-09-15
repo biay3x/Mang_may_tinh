@@ -1,0 +1,29 @@
+{
+  "input_rows": 51070,
+  "complete_rows": 51067,
+  "excluded_missing_or_invalid": 3,
+  "negative_residual_rows": 0,
+  "correlation_uses_same_complete_rows": true,
+  "not_used_as_isolation_forest_features": [
+    "tcp_connect_ms",
+    "tls_handshake_ms",
+    "ttfb_ms"
+  ],
+  "maximum_http_observation": {
+    "timestamp": "2026-08-31 09:12:00+07:00",
+    "tcp_connect_ms": 46899.461,
+    "tls_handshake_ms": 157.69,
+    "ttfb_ms": 122.79,
+    "http_latency_ms": 47294.055,
+    "remaining_read_ms": 114.11399999999412,
+    "tcp_percent_of_total": 99.16565834754496
+  },
+  "episode": {
+    "start": "2026-09-02 20:54:30+07:00",
+    "end_exclusive_estimated": "2026-09-02 21:23:00+07:00",
+    "complete_rows": 57,
+    "reference_rows": 35718,
+    "reference": "Các lượt thuộc train đủ bốn thời gian HTTP, không mặc định đều bình thường",
+    "largest_absolute_increase_stage": "ttfb_ms"
+  }
+}

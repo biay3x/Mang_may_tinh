@@ -1,0 +1,6 @@
+﻿timestamp,target_id,rtt_ms,rtt_min_ms,rtt_max_ms,jitter_ms,n_sent,n_received,loss_rate,dns_latency_ms,tcp_connect_ms,tls_handshake_ms,ttfb_ms,http_latency_ms,http_status_code,missing_metric_count,measurement_consistency_issue,session_id
+2026-08-27 03:01:30+07:00,google,48.5,48.0,50.0,0.667,4,4,0.0,53.339,,,,,,1,False,8
+2026-08-29 07:09:00+07:00,google,58.5,53.0,64.0,5.667,4,4,0.0,,2297.509,1405.201,297.149,4679.006,200.0,1,False,10
+2026-08-29 07:09:30+07:00,google,56.75,55.0,59.0,2.0,4,4,0.0,,2247.573,3004.051,298.338,8760.068,200.0,1,False,10
+2026-08-31 07:52:30+07:00,google,,,,,4,0,1.0,,,,,,200.0,4,True,12
+2026-08-31 07:53:00+07:00,google,,,,,4,0,1.0,,,,,,200.0,4,True,12
